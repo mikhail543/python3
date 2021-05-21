@@ -6,9 +6,10 @@
 #1.0         2021
 #
 #-------------------------------------------
-import shutil  
+import shutil 
 import os 
 import sys 
+
 #---------------------------------------------------------------
 #  logs2102.py       mylog.txt      10          5              /
 #  script itself     source file   size   how many copies     /
@@ -30,7 +31,7 @@ if(os.path.isfile(file_name) == True):
             for currentFileNum in range(logsnumber, 1, -1):
                 src = file_name + "_" + str(currentFileNum-1)
                 dst = file_name + "_" + str(currentFileNum)
-                if(os.path.isfile(src)) == True):
+                if(os.path.isfile(src) == True):
                     shutil.copyfile(src,dst)
                     print("Copied: " + src + " to " + dst)
             shutil.copyfile(file_name, file_name + "_1")
